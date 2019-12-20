@@ -1,0 +1,349 @@
+@mixin baseColorMixin($backgroundColor, $color) {
+  background-color: $backgroundColor;
+  color: $color;
+}
+
+body{
+  font-family: roboto;
+  margin-top: 40px;
+  background-color: #DEE6EC;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard{
+  display: flex;
+  min-height: 500px;
+  width: 1000px;
+  margin: auto;
+  flex-wrap: nowrap;
+}
+
+.sidebar{
+  padding: 10px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: white;
+  flex-grow: 0;
+  display: flex;
+  min-height: 20px;
+}
+
+.newButton{
+  padding: 5px;
+  font-size: 15px;
+  justify-content: space-between;
+  border-radius: 3px;
+}
+
+.profileInfo{
+  padding: 3px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profileInfoRight{
+  display: flex;
+}
+
+.menuItems{
+  padding: 15px;
+  border-right: 1px solid #F2F6F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menuItem{
+  padding: 7px;
+}
+
+.bottomSpacing{
+  padding-bottom: 20px;
+}
+
+.firstItem{
+  padding-top: 5px;
+}
+
+.selectedMenuItems{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+  padding-left: 25px;
+}
+
+.button{
+  background-color: inherit;
+  border-color: rgb(200, 220, 230);
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  border-width: thin;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  padding-top: 30px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #F5F8FA;
+  flex-grow: 200;
+}
+
+.thinBlackBorder{
+  border: 1px solid #99AAB3;
+}
+
+.selected{
+  @include baseColorMixin(#EFF6F7,#00BCCA)
+}
+
+.basePurple{
+  @include baseColorMixin(#F8E7FF,#8629C9)
+}
+
+.baseRed{
+  @include baseColorMixin(#FFE1E2, #FD4051)
+}
+
+.baseBlue{
+  @include baseColorMixin(#DBE5F2, #607DCA)
+}
+
+.baseYellow{
+  @include baseColorMixin(#FFF7EA, #CD8D6B)
+}
+
+.baseGreen{
+  @include baseColorMixin(#E4FAEC, #5ABC7B)
+}
+
+.inverseBaseGreen{
+  @include baseColorMixin(#36E015,#E4FAEC)
+}
+
+.inverseSelected{
+  @include baseColorMixin(#00BCCA, #EFF6F7)
+}
+
+.profileInfoButton{
+  box-sizing: border-box;
+  padding: 2px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 3px;
+  margin-right: 5px;
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+}
+
+.contentFilter{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.filterOption
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #99AAB3;
+  color: #99AAB3;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 10px;
+  min-height: 20px;
+  border-radius: 12px;
+  margin-right: 3px;
+  background-color: inherit;
+}
+
+.card:first-child{
+  margin-bottom: 0px;
+}
+
+.card>div{
+  margin-bottom: 2px;
+}
+
+.content>div{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.contentTitle{
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contentTitleLeft{
+  display: flex;
+}
+
+.contentTitleLeftContent{
+  margin-right: 10px;
+}
+.contentFilter{
+  padding: 3px;    
+  display: flex;
+  justify-content: space-between;
+}
+
+.selectedMenuItemTitle{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title{
+  font-size: 15px;
+  color: #293F4B;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.subTitle{
+  font-size: 15px;
+  color: #293F4B;
+}
+
+.subTitleSummary{
+  font-size: 10px;
+  color: #99AAB3;
+}
+
+.onHoverPointer:hover{
+  cursor: pointer;
+}
+
+.mediumFocused{
+  @include baseColorMixin(inherit, #99AAB3);
+}
+
+.searchInput{
+  border: 0px;
+  font-size: 13px;
+}
+
+.baseSmallFont{
+  font-size: 8px;
+}
+
+.roundedBorders{
+  border-radius: 20px;
+}
+
+.greyBackground{
+  background-color: #E9EFF0;
+}
+
+.circle{
+  border-radius: 100%;
+}
+
+.selfCenter{
+  align-self: center;
+}
+
+.internalSpacing{
+  padding : 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.horizontalPadding{
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.icon{
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.sidebarItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.deckContainer{
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  height: 100%;
+  overflow: scroll;
+  .deck{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 500;
+    flex-shrink: 0;
+    align-items: stretch;
+    flex-basis: 200px;
+    box-sizing: border-box;
+    padding: 3px;    
+    .heading{
+      margin-bottom: 5px;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      div{
+        border-radius: 5px;
+      }
+    }
+    .card{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      background-color: white;
+      border-radius: 5px;
+      font-size: 12px;
+      border-bottom: 4px solid #F5F8FA;
+      .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        min-height: 100px;
+      }
+      .detail{
+        font-size: 10px;
+        box-sizing: border-box;
+        padding-top: 5px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
