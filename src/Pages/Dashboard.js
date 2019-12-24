@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.scss'
+import 'typeface-roboto'
 
 export default function Dashboard() {
     return (
@@ -7,7 +8,7 @@ export default function Dashboard() {
             <div className='sidebar'>
                 <div className='menuItems'>
                     <div>
-                        <div className='menuItem firstItem bottomSpacing'>A</div>
+                        <div className='firstMenuItem'>A</div>
                         <div className='menuItem selected circle'>A</div>
                         <div className='menuItem'>A</div>
                         <div className='menuItem'>A</div>
@@ -15,7 +16,7 @@ export default function Dashboard() {
                         <div className='menuItem'>A</div>
                     </div>
                     <div>
-                        <div className='mediumFocused    '>B</div>
+                        <div className='mediumFocused'>B</div>
                     </div>
                 </div>
                 <div className='selectedMenuItems'>
@@ -78,40 +79,51 @@ export default function Dashboard() {
             </div>
             <div className='content'>
                 <div className='profileInfo'>
-                    <div className='profileInfoRight mediumFocused baseSmallFont' style={{lineHeight:'20px'}}>&larr; &nbsp; Back to product dashboard</div>
+                    <div className='profileInfoLeft'>&larr; &nbsp; Back to product dashboard</div>
                     <div className='profileInfoRight'>
                         <div className='profileInfoButton inverseBaseGreen bold'>You have 12 new leads</div>
-                        <div className='profileInfoButton' style={{border:'1px solid #E9EFF0'}}>You have 12 new leads</div>
-                        <div className='profileInfoButton' style={{border:'1px solid #E9EFF0'}}>A</div>
+                        <div className='profileInfoButton'>You have 12 new leads</div>
+                        <div className='profileInfoButton'>A</div>
                     </div>
                 </div>
                 <div className='contentTitle'>
                     <div className='contentTitleLeft'>
-                        <div className='contentTitleLeftContent' style={{fontSize:'30px'}}>A</div>
-                        <div className='mediumFocused contentTitleLeftContent'>
-                            <div style={{fontSize:'20px'}}>Product Roadmap</div>
-                            <div style={{fontSize:'10px'}}>Last edited by Maciej Kataska</div>
+                        <div className='icon'>A</div>
+                        <div className='title'>
+                            <div className='heading'>
+                                Product Roadmap
+                            </div>
+                            <div className='description'>
+                                Last edited by Maciej Kataska
+                            </div>
                         </div>
                     </div>
-                    <div className='mediumFocused'><span style={{fontSize: '12px', marginRight: '2px'}}>View</span> <span className='roundedBorders thinBlackBorder' style={{fontSize: '15px', paddingTop:0,paddingBottom:0,paddingLeft:'0px',paddingRight:'3px'}}><span className='internalSpacing inverseSelected circle' style={{fontSize:'15px'}}>A</span>B</span></div>
+                    <div className='contentTitleRight'>
+                        <span style={{fontSize: '12px', marginRight: '5px'}}>View</span>
+                        <span className='toggleIcon'>
+                            <span className='toggleOptionSelected'>A</span>B
+                        </span>
+                    </div>
                 </div>
                 <div className='contentFilter'>
-                    <div style={{display:'flex'}}>
+                    <div className='left'>
                         <div className='filterOption'>Quick Search...</div>
                         <div className='filterOption'>Filters</div>
-                        <div className='filterOption' style={{marginRight:'0px'}}>People</div>
-                        <div className='filterOption' style={{border:'0px'}}>More</div>
+                        <div className='filterOption'>People</div>
+                        <div className='lastFilterOption'>More</div>
                     </div>
-                    <div className='newButton inverseSelected'>New &darr;</div>
+                    <div className='right'>
+                        New &darr;
+                    </div>
                 </div>
                 <div className='deckContainer'>
                     <div className='deck'>
                         <div className='heading'>
-                                <div className='mediumFocused greyBackground horizontalPadding'>No Stage</div>
-                                <div className='mediumFocused horizontalPadding'>... +</div>
+                                <div className='mediumFocused greyBackground title'>No Stage</div>
+                                <div className='more'>... +</div>
                         </div>
                         <div className='card'>
-                            <div className='image greyBackground'>
+                            <div className='image'>
                                 I am an image
                             </div>
                             <div>Marketing materials review</div>
@@ -123,20 +135,20 @@ export default function Dashboard() {
                         <div className='card'>
                             <div>Product Paage structure</div>
                             <div className='detail'>
-                                <div>
-                                    <div className='mediumFocused greyBackground horizontalPadding roundedBorders'>+ Tag</div>
-                                    <div className='mediumFocused horizontalPadding '>A 2</div>
-                                </div>
-                                <div className='mediumFocused horizontalPadding '>
-                                    <span className='selected circle internalSpacing'>E</span> Edward Floyd
+                                <div className='mediumFocused greyBackground horizontalPadding roundedBorders'>+ Tag</div>
+                                <div className='mediumFocused horizontalPadding '>A 2</div>
+                            </div>
+                            <div className='detail mediumFocused'>
+                                <div style={{marginTop:'5px'}}>
+                                    <span className='selected horizontalPadding roundedBorders' style={{marginRight:'2px'}}>E</span> Edward Floyd
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className='deck'>
                         <div className='heading'>
-                                <div className='baseBlue horizontalPadding'>In progress</div>
-                                <div className='mediumFocused horizontalPadding'>... +</div>
+                            <div className='baseBlue horizontalPadding'>In progress</div>
+                            <div className='more'>... +</div>
                         </div>
                         <div className='card'>
                             <div>Calendar view</div>
@@ -191,7 +203,7 @@ export default function Dashboard() {
                     <div className='deck'>
                         <div className='heading'>
                                 <div className='baseRed horizontalPadding'>Review</div>
-                                <div className='mediumFocused horizontalPadding'>... +</div>
+                                <div className='more'>... +</div>
                         </div>
                         <div className='card'>
                             <div>Hi-fi wireframes</div>
@@ -223,7 +235,7 @@ export default function Dashboard() {
                     <div className='deck'>
                         <div className='heading'>
                                 <div className='basePurple horizontalPadding'>In progress</div>
-                                <div className='mediumFocused horizontalPadding'>... +</div>
+                                <div className='more'>... +</div>
                         </div>
                         <div className='card'>
                             <div>Hi-fi wireframes</div>
