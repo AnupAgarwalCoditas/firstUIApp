@@ -239,13 +239,13 @@ body{
           line-height: 20px;
           font-size: 10px;
         }
-        .profileInfoLeft{
+        .left{
           display: flex;
           line-height:20px;
           @extend .mediumFocused;
           @extend .baseSmallFont;
         }
-        .profileInfoRight{
+        .right{
           display: flex;
         }
       }
